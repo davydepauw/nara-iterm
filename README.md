@@ -2,6 +2,14 @@
 
 A cool dark color theme for iTerm2, ported from [Nara for VS Code and Cursor](https://github.com/davydepauw/nara-vscode). Pond-stone blue-grey, sea-foam teal, and lantern gold.
 
+**Nara**
+
+![Nara](screenshots/nara.png)
+
+**Nara High Contrast**
+
+![Nara High Contrast](screenshots/nara-high-contrast.png)
+
 ## Install
 
 1. In iTerm2, open **Settings → Profiles → Colors → Color Presets… → Import…**

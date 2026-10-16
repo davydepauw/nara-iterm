@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nara terminal previews</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding: 32px;
+    }
+    .term {
+      width: 760px;
+      padding: 26px 28px 22px;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "SF Mono", ui-monospace, Menlo, monospace;
+      font-size: 14px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .line { white-space: pre; min-height: 1.55em; }
+    .dim { color: var(--bright-black); }
+    .red { color: var(--red); }
+    .green { color: var(--green); }
+    .yellow { color: var(--yellow); }
+    .blue { color: var(--blue); }
+    .magenta { color: var(--magenta); }
+    .cyan { color: var(--cyan); }
+    .accent { color: var(--accent); }
+    .sel { background: color-mix(in srgb, var(--selection) var(--sel-mix, 82%), transparent); }
+    .cursor {
+      display: inline-block;
+      width: 0.62em;
+      height: 1.05em;
+      background: var(--cursor);
+      vertical-align: -0.15em;
+    }
+    .bars {
+      display: flex;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .bars i {
+      width: 22px;
+      height: 14px;
+      display: block;
+    }
+    .group { display: flex; gap: 5px; }
+  </style>
+</head>
+<body>
+  <div class="term" id="nara" style="
+    --bg:#1A2E33; --fg:#DCE5E3; --cursor:#FFBF6E; --selection:#2A4C42; --sel-mix:82%; --accent:#82D2BC;
+    --black:#152429; --red:#F27497; --green:#D5DE63; --yellow:#FFBF6E;
+    --blue:#74B6F8; --magenta:#BA9EF6; --cyan:#65DEF3; --white:#DCE5E3;
+    --bright-black:#5A8894; --bright-red:#F695B0; --bright-green:#E2E886; --bright-yellow:#FFCF92;
+    --bright-blue:#96C8FC; --bright-magenta:#CAB6FA; --bright-cyan:#88E8F8; --bright-white:#FFFFFF;">
+    <div class="line"><span class="accent">nara</span><span class="dim">@</span><span class="cyan">pond</span> <span class="blue">~/Projects/nara-iterm</span> <span class="magenta">main</span></div>
+    <div class="line"><span class="yellow">❯</span> ls</div>
+    <div class="line">LICENSE  README.md  <span class="green">palette.py</span>  <span class="blue">schemes/</span></div>
+    <div class="line"></div>
+    <div class="line"><span class="accent">nara</span><span class="dim">@</span><span class="cyan">pond</span> <span class="blue">~/Projects/nara-iterm</span> <span class="magenta">main</span></div>
+    <div class="line"><span class="yellow">❯</span> cat palette.py</div>
+    <div class="line"><span class="cyan">class</span> <span class="yellow">Lantern</span>:</div>
+    <div class="line">    <span class="dim"># dusk along the pond</span></div>
+    <div class="line">    <span class="cyan">def</span> <span class="blue">glow</span>(self, hour):</div>
+    <div class="line">        <span class="cyan">return</span> <span class="green">"teal"</span> <span class="cyan">if</span> hour &lt; <span class="red">18</span> <span class="cyan">else</span> <span class="sel"><span class="green">"gold"</span></span></div>
+    <div class="line"></div>
+    <div class="line"><span class="accent">nara</span><span class="dim">@</span><span class="cyan">pond</span> <span class="blue">~/Projects/nara-iterm</span> <span class="magenta">main</span></div>
+    <div class="line"><span class="yellow">❯</span> <span class="cursor"></span></div>
+    <div class="bars">
+      <span class="group">
+        <i style="background:#152429"></i><i style="background:#F27497"></i><i style="background:#D5DE63"></i><i style="background:#FFBF6E"></i>
+        <i style="background:#74B6F8"></i><i style="background:#BA9EF6"></i><i style="background:#65DEF3"></i><i style="background:#DCE5E3"></i>
+      </span>
+      <span class="group">
+        <i style="background:#5A8894"></i><i style="background:#F695B0"></i><i style="background:#E2E886"></i><i style="background:#FFCF92"></i>
+        <i style="background:#96C8FC"></i><i style="background:#CAB6FA"></i><i style="background:#88E8F8"></i><i style="background:#FFFFFF"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="term" id="hc" style="
+    --bg:#13292E; --fg:#E0EAE8; --cursor:#FFB85B; --selection:#21443A; --sel-mix:85%; --accent:#75DAC0;
+    --black:#101F25; --red:#FF709A; --green:#D1DA3B; --yellow:#FFB85B;
+    --blue:#77BBFF; --magenta:#BFA1FF; --cyan:#3DDCF7; --white:#E0EAE8;
+    --bright-black:#6D9FAC; --bright-red:#FF8FB0; --bright-green:#DEE563; --bright-yellow:#FFC87F;
+    --bright-blue:#95CAFF; --bright-magenta:#CDB6FF; --bright-cyan:#64E6FC; --bright-white:#FFFFFF;">
+    <div class="line"><span class="accent">nara</span><span class="dim">@</span><span class="cyan">pond</span> <span class="blue">~/Projects/nara-iterm</span> <span class="magenta">main</span></div>
+    <div class="line"><span class="yellow">❯</span> ls</div>
+    <div class="line">LICENSE  README.md  <span class="green">palette.py</span>  <span class="blue">schemes/</span></div>
+    <div class="line"></div>
+    <div class="line"><span class="accent">nara</span><span class="dim">@</span><span class="cyan">pond</span> <span class="blue">~/Projects/nara-iterm</span> <span class="magenta">main</span></div>
+    <div class="line"><span class="yellow">❯</span> cat palette.py</div>
+    <div class="line"><span class="cyan">class</span> <span class="yellow">Lantern</span>:</div>
+    <div class="line">    <span class="dim"># dusk along the pond</span></div>
+    <div class="line">    <span class="cyan">def</span> <span class="blue">glow</span>(self, hour):</div>
+    <div class="line">        <span class="cyan">return</span> <span class="green">"teal"</span> <span class="cyan">if</span> hour &lt; <span class="red">18</span> <span class="cyan">else</span> <span class="sel"><span class="green">"gold"</span></span></div>
+    <div class="line"></div>
+    <div class="line"><span class="accent">nara</span><span class="dim">@</span><span class="cyan">pond</span> <span class="blue">~/Projects/nara-iterm</span> <span class="magenta">main</span></div>
+    <div class="line"><span class="yellow">❯</span> <span class="cursor"></span></div>
+    <div class="bars">
+      <span class="group">
+        <i style="background:#101F25"></i><i style="background:#FF709A"></i><i style="background:#D1DA3B"></i><i style="background:#FFB85B"></i>
+        <i style="background:#77BBFF"></i><i style="background:#BFA1FF"></i><i style="background:#3DDCF7"></i><i style="background:#E0EAE8"></i>
+      </span>
+      <span class="group">
+        <i style="background:#6D9FAC"></i><i style="background:#FF8FB0"></i><i style="background:#DEE563"></i><i style="background:#FFC87F"></i>
+        <i style="background:#95CAFF"></i><i style="background:#CDB6FF"></i><i style="background:#64E6FC"></i><i style="background:#FFFFFF"></i>
+      </span>
+    </div>
+  </div>
+</body>
+</html>
